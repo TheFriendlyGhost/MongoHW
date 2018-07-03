@@ -13,7 +13,7 @@ function buildCards(data){
     var col = $('<div class="col-md-12 md-offset-1>')
     var card = $('<div class="card">')
 
-    var head = $('<div class="card-header"><p>' + data[i].title + '</p></div')
+    var head = $('<div class="card-header"><a href="'+data[i].link+'">' + data[i].title + '</a></div')
     var body = $('<div class="card-body"><p>' + data[i].summary + '</p></div')
 
     var button = $('<a class="btn btn-primary save-btn" data-id ="' + data[i]._id + '">Save Article</a>')
