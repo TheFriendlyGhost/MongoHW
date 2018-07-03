@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+  
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
+    <link href="https://fonts.googleapis.com/css?family=Anton" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=IM+Fell+English" rel="stylesheet">
+    <meta charset="UTF-8">
+    <title>NYT Scraper</title>
+    <style>
+      body{
+        background: url('paper.png');
+      }
+
+      h1,h2{
+        font-family: 'IM Fell English', serif;
+      }
+
+      h1{
+        font-size: 80px;
+      }
+
+      h2{
+        font-size: 50px;
+      }
+      .navbar-custom {
+        background-color: #ff5500;
+      }
+  
+      input{
+        margin-bottom: 10px;
+      }
+      .nav-item{
+        margin-right: 10px;
+      }
+
+      /* change the brand and text color */
+      .navbar-custom .navbar-brand,
+      .navbar-custom .navbar-text {
+          color: rgba(255,255,255,.8);
+      }
+
+      /* change the link color */
+      .navbar-custom .navbar-nav .nav-link {
+          color: rgba(255,255,255,.5);
+      }
+
+      /* change the color of active or hovered links */
+      .navbar-custom .nav-item.active .nav-link,
+      .navbar-custom .nav-item:hover .nav-link {
+          color: #ffffff;
+      }
+
+      /* for dropdown only - change the color of droodown */
+      .navbar-custom .dropdown-menu {
+          background-color: #ff5500;
+      }
+      .navbar-custom .dropdown-item {
+          color: #ffffff;
+      }
+      .navbar-custom .dropdown-item:hover,
+      .navbar-custom .dropdown-item:focus {
+          color: #333333;
+          background-color: rgba(255,255,255,.5);
+      }
+
+      .jumbotron {
+        background: url("coffee.jpg");
+        height: 400px;
+      }
+
+      .card,.form{
+        width: 100%;
+        margin: 10px 0px;   
+      }
+
+      input{
+        width:100%;
+        height: 30px;
+      }
+
+      .btn{
+        margin-right: 20px;
+      }
+
+      .empty-row{
+        background-color: orange;
+        font-size: 30px;
+        font-weight: bold;
+        font-family: 'Anton', sans-serif; 
+      }
+    </style>
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-sm navbar-custom">
+      <a href="/" class="navbar-brand">Mongo Scraper</a>
+      <button class="navbar-toggler" data-toggle="collapse" data-target="#navbarCustom">
+          <i class="fa fa-bars fa-lg py-1 text-white"></i>
+      </button>
+      <div class="navbar-collapse collapse" id="navbarCustom">
+          <ul class="navbar-nav">
+              <li class="nav-item">
+                  <a class="nav-link home-link" href="#">Home</a>
+              </li>
+              <li class="nav-item">
+                  <a class="nav-link saved-link" href="#">Saved Articles</a>
+              </li>
+              <button class="btn btn-warning scrape-link">
+                Scrape New Articles
+              </button>
+          </ul>
+      </div>
+    </nav>
+    
+    <div class="jumbotron jumbotron-fluid">
+      <div class="container text-center">
+        <h1 class="display-3">Mongo Scraper</h1>
+        <h2>NYT Edition</h2> 
+      </div>
+    </div>
+    
+    <div class="container" id="notes">
+    
+    </div>
+
+    <div class="container" id="articles">
+    
+    </div>  
+    
+    <!-- <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-body">
+            
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+          </div>
+        </div>
+      </div>
+    </div> -->
+
+    <!-- <div class="modal fade" id="noteModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-body">
+            
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+          </div>
+        </div>
+      </div>
+    </div> -->
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="app.js"></script>
+  </body>
+</html>
